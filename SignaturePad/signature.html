@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="starter">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Signature Pad Using Angular Js</title>
+
+    <script src="Scripts/jquery-1.11.0.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Controller/AppSign.js"></script>
+    <script src="Scripts/Controller/ControllerSign.js"></script>
+    <script src="Scripts/Controller/ServiceSign.js"></script>
+    <script src="Scripts/Controller/signature_pad.js"></script>
+    <link href="Css/bootstrap.css" rel="stylesheet" />
+    <link href="Css/Social.css" rel="stylesheet" />
+    <link href="Css/styleSign.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body ng-controller="SignModalCtrl">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id='divProduct' class="form-horizontal" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="name">Name</label>
+                        <div class="col-md-4">
+                            <input type="text" id='txtYourName' ng-model="sign.name" placeholder='Enter Your Product Name' class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="control-label col-md-2">Signature</label>
+                        <div class="col-md-4">
+                            <canvas id='signatureCanvas'  style='border: 1px solid black;height:150px !important' ></canvas>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-4">
+                            <button type="submit" class="btn btn-success" ng-click="saveCanvas()">Save</button>
+
+                            <button type="submit" class="btn btn-danger" ng-click="showCanvas()">Show</button>
+
+                            <button type="submit" class="btn btn-warning" ng-click="clearCanvas()">Clear</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="divShow">
+                        <br />
+                        <img ng-src='{{signature}}' />
+                    </div>
+
+                    <!--<div id='bindProduct' class="col-sm-12">
+                <br />
+                <table class='table table-bordered' style="text-align: center;">
+                    <tbody>
+                        <tr>
+                            <th style="text-align: center;">Name</th>
+                            <th style="text-align: center;">Description</th>
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                        <tr ng-repeat="sign in Signatures">
+                            <td><b>{{ sign.cName}}</b></td>
+                            <td class="zoom_img"><img src="http://www.kunalpatel.tk/Images/Signature//{{ sign.cSigndata}}" height="50" width="100" /> </td>
+                            <td>
+                                <span>
+                                    <a href="javascript:void(0);" ng-click="delete(sign.SignId);">
+                                        <img width="16" height="16" alt="Close" src="Image/close.png" />
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+        
+</body>
+</html>

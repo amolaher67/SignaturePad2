@@ -1,0 +1,72 @@
+﻿.social {
+    height: 0em;
+    width: 13.5em;
+}
+
+    .social li {
+        display: block;
+        height: 4em;
+        line-height: 4em;
+        margin: -3.2em;
+        position: absolute;
+        -webkit-transition: -webkit-transform .7s;
+        -moz-transition: -moz-transform .7s;
+        -ms-transition: -ms-transform .7s;
+        -o-transition: -o-transform .7s;
+        transition: transform .7s;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(90deg);
+        text-align: center;
+        width: 4em;
+    }
+
+    .social a {
+        color: #fffdf0;
+        display: block;
+        height: 4em;
+        line-height: 6em;
+        text-align: center;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        width: 4em;
+    }
+
+    .social li:hover {
+        -webkit-transform: scale(1.3,1.3) rotate(45deg);
+        -moz-transform: scale(1.3,1.3) rotate(45deg);
+        -ms-transform: scale(1.3,1.3) rotate(45deg);
+        -o-transform: scale(1.3,1.3) rotate(45deg);
+        transform: scale(1.3,1.3) rotate(45deg);
+    }
+
+.csharpcorner {
+    top: 40px;
+    left: 50%;
+}
+
+.twitter {
+    top: 40px;
+    bottom: 0;
+    left: 75%;
+}
+
+
+.zoom_img img {
+    height: 40px;
+    width: 80px;
+    -moz-transition: -moz-transform 0.5s ease-in;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    -o-transition: -o-transform 0.5s ease-in;
+}
+
+    .zoom_img img:hover {
+        -moz-transform: scale(2);
+        -webkit-transform: scale(2);
+        -o-transform: scale(2);
+    }
