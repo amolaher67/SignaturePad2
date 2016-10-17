@@ -2,7 +2,7 @@
 app.controller('SignModalCtrl', ['$scope', '$http', 'signService', function ($scope, $http, signService) {
 
     $scope.sign = {};
-
+    $scope.dataLoading = false;
     
 
     var canvas = document.getElementById('signatureCanvas');
@@ -16,6 +16,7 @@ app.controller('SignModalCtrl', ['$scope', '$http', 'signService', function ($sc
             "border": "",
         });
         $('#divShow').hide();
+        $scope.dataLoading = false;
     }
 
     $scope.saveCanvas = function () {
@@ -27,7 +28,7 @@ app.controller('SignModalCtrl', ['$scope', '$http', 'signService', function ($sc
             });
             return false;
         }
-
+        $scope.dataLoading = true;
         var sigImg = signaturePad.toDataURL().replace('data:image/png;base64,', '');
         var name = $scope.sign.name;
 
@@ -42,9 +43,8 @@ app.controller('SignModalCtrl', ['$scope', '$http', 'signService', function ($sc
                 "border": "",
             });
             signaturePad.clear();
-            
+            $scope.dataLoading = false;
             alert("Image Saved");
-
         })
         .error(function (response) {
 
